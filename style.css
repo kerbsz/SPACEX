@@ -22,7 +22,7 @@ body{
     
 }
 .navBar a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
     font-size: small;
 }
 header .logo{
@@ -33,25 +33,18 @@ header .logo{
 
 .navBar .nav-links ul{
     display: flex;
+    
+   
 }
 .navBar .nav-links ul a{
     transition: 0.5s;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-  }
-  
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #00e6d3, 0 0 60px #e60073, 0 0 70px #fcf700;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #fdfdfd, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #4dfff6, 0 0 70px #ff4da6, 0 0 80px #ff5e00;
-    }
-  }
+    width: 60%;
+}
 .navBar .nav-links ul a:hover{
-    font-size: medium;
-    color: white;
+    font-size: large;
+    border-radius: 5px;
+    opacity: 0.3;
+    
 }
 
 .navBar .nav-links ul li{
@@ -71,7 +64,124 @@ header .logo{
     width: 40px;
     display: none;
 }
+.Section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Background{
+    width:100%;
+    align-items: center;
+}
+.Fir-Description{
+    position: absolute;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: -135%;
+    margin-left: -50%;
+}
+.Fir-Description button{
+    width: 60%;
+    height: 40px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.014);
+    border: 1px solid white;
+    transition: 1s;
+}
+.Fir-Description button:hover{
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(240, 248, 255);
+    color: black;
+}
+.Sec-Description{
+    position: absolute;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: -50%;
+}
+.Sec-Description button{
+    width: 60%;
+    height: 40px;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.014);
+    border: 1px solid white;
+    transition: 1s;
+}
+.Sec-Description button:hover{
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.Thir-Description{
+    position: absolute;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 130%;
+    margin-left: -50%;
+}
+.Thir-Description button{
+    width: 60%;
+    height: 40px;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.014);
+    border: 1px solid white;
+    transition: 1s;
+}
+.Thir-Description button:hover{
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.Fort-Description{
+    position: absolute;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 200%;
+    margin-left: -50%;
+}
+.Fort-Description button{
+    width: 80%;
+    height: 40px;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.014);
+    border: 1px solid white;
+    transition: 1s;
+}
+.Fort-Description button:hover{
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 700;
+    background-color: white;
+    color: black;
 
+}
+
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    
+}
+.footer-links{
+    transition: 0.4s;
+    color: white;
+}
+.footer-links:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
 
 @media screen and (max-width: 900px) {
     .navBar .logo{
@@ -84,14 +194,17 @@ header .logo{
     }
     .navBar .menu-hum{
         display: block;
+        z-index: 100;
+        position: fixed;
     }
     .nav-links{
+        z-index: 100;
         top: 0;
         left: 0;
         position: absolute;
-        background-color: rgba(95, 94, 94, 0.212);
+        background-color: rgba(95, 94, 94, 0.116);
         width: 100%;
-        height: 100vh;
+        height: 150vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -101,19 +214,55 @@ header .logo{
     }
     .nav-links.mobile-menu{
         margin-left: 0;
+        
     }
     .nav-links ul { 
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: xx-large;
 
     }
     .navBar .nav-links ul li { 
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        transition: color 1s ease-in-out, 1s ease-in-out;
         margin-top:30px;
-        padding: 15px;
-        font-size: 0.9em;
+        border-width: 5px solid rgb(255, 255, 255);
+        padding: 5px;
+        font-size: xx-large;
     }
-    
+    .navBar .nav-links ul li:hover { 
+        box-shadow: inset 1000px 0 0 0 #54b3d6;
+        border-radius: 15%;
+
+    }
+    .Fir-Description{
+        font-size: 11px;
+        margin-left: -35%;
+        margin-top: -162%;
+    }
+    .Sec-Description{
+        font-size: 11px;
+        margin-left: -35%;
+        margin-top: -25%;
+    }
+    .Thir-Description{
+        font-size: 11px;
+        margin-left: -35%;
+        margin-top: 100%;
+    }
+    .Fort-Description{
+        font-size: 11px;
+        margin-left: -52%;
+        margin-top: 230%;
+    }
+    .footer{
+        margin-top: 8%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 }
     
     
