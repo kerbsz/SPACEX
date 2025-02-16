@@ -1,0 +1,37 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="SpaceXlogo.png">
+        <link rel="stylesheet" href="for-Falcon_9.css">
+        <title>SpaceX</title>
+    </head>
+    <body>
+        <nav class="navBar">
+            <a href="Index.html"><img class="logo" src="spacex-logo-black-and-white.png" alt="SpaceX_logo" value="Spacex" style="width: 210px;"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Index.html">HOME</a></li>
+                    <li class="active"><a href="#">FALCON 9</a></li>
+                    <li><a href="#">FALCON HEAVY</a></li>
+                    <li><a href="#">DRAGON</a></li>
+                    <li><a href="#">STAR SHIP</a></li>
+                    <li><a href="#">HUMAN SPACEFLIGHT</a></li>
+                    <li><a href="#">RIDESHARE</a></li>
+                    <li><a href="#">STARSHIELD</a></li>
+                    <li><a href="#">STARLINK</a></li>
+                </ul>
+            </div>
+            <img src="hamburger-icon-white-16.jpg" alt="menu-humberger" class="menu-hum">
+        </nav>
+
+    </body>
+    <script>
+        const menuhamberger = document.querySelector(".menu-hum")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuhamberger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</html>

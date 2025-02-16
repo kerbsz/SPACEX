@@ -74,7 +74,22 @@ header .logo{
     width:100%;
     align-items: center;
 }
-.Fir-Description{
+@keyframes appear {
+    from{
+        opacity: 2;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(0px);
+    }   
+}
+.Description{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover;
+}
+#Fir-Description{
     position: absolute;
     font-size: large;
     font-family:Arial, Helvetica, sans-serif;
@@ -82,7 +97,7 @@ header .logo{
     margin-top: -135%;
     margin-left: -50%;
 }
-.Fir-Description button{
+#Fir-Description button{
     width: 60%;
     height: 40px;
     color: white;
@@ -90,21 +105,21 @@ header .logo{
     border: 1px solid white;
     transition: 1s;
 }
-.Fir-Description button:hover{
+#Fir-Description button:hover{
     border-radius: 10px;
     font-size: medium;
     font-weight: 700;
     background-color: rgb(240, 248, 255);
     color: black;
 }
-.Sec-Description{
+#Sec-Description{
     position: absolute;
     font-size: large;
     font-family:Arial, Helvetica, sans-serif;
     color: white;
     margin-left: -50%;
 }
-.Sec-Description button{
+#Sec-Description button{
     width: 60%;
     height: 40px;
     color:white;
@@ -112,14 +127,14 @@ header .logo{
     border: 1px solid white;
     transition: 1s;
 }
-.Sec-Description button:hover{
+#Sec-Description button:hover{
     border-radius: 10px;
     font-size: medium;
     font-weight: 700;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
-.Thir-Description{
+#Thir-Description{
     position: absolute;
     font-size: large;
     font-family:Arial, Helvetica, sans-serif;
@@ -127,7 +142,7 @@ header .logo{
     margin-top: 130%;
     margin-left: -50%;
 }
-.Thir-Description button{
+#Thir-Description button{
     width: 60%;
     height: 40px;
     color:white;
@@ -135,14 +150,14 @@ header .logo{
     border: 1px solid white;
     transition: 1s;
 }
-.Thir-Description button:hover{
+#Thir-Description button:hover{
     border-radius: 10px;
     font-size: medium;
     font-weight: 700;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
-.Fort-Description{
+#Fort-Description{
     position: absolute;
     font-size: large;
     font-family:Arial, Helvetica, sans-serif;
@@ -150,15 +165,15 @@ header .logo{
     margin-top: 200%;
     margin-left: -50%;
 }
-.Fort-Description button{
-    width: 80%;
+#Fort-Description button{
+    width: 60%;
     height: 40px;
     color:white;
     background-color: rgba(255, 255, 255, 0.014);
     border: 1px solid white;
     transition: 1s;
 }
-.Fort-Description button:hover{
+#Fort-Description button:hover{
     border-radius: 10px;
     font-size: medium;
     font-weight: 700;
@@ -168,6 +183,7 @@ header .logo{
 }
 
 .footer{
+    height: 40px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -225,35 +241,35 @@ header .logo{
     }
     .navBar .nav-links ul li { 
         box-shadow: inset 0 0 0 0 #54b3d6;
-        transition: color 1s ease-in-out, 1s ease-in-out;
+        transition: color 0.5s ease-in-out, 0.5s ease-in-out;
         margin-top:30px;
         border-width: 5px solid rgb(255, 255, 255);
         padding: 5px;
         font-size: xx-large;
     }
     .navBar .nav-links ul li:hover { 
-        box-shadow: inset 1000px 0 0 0 #54b3d6;
-        border-radius: 15%;
+        box-shadow: -5px -5px 10px 10px #54b3d6;
+        border-radius: 20px;
 
     }
-    .Fir-Description{
+    #Fir-Description{
         font-size: 11px;
-        margin-left: -35%;
+        margin-left: -25%;
         margin-top: -162%;
     }
-    .Sec-Description{
+    #Sec-Description{
         font-size: 11px;
-        margin-left: -35%;
+        margin-left: -25%;
         margin-top: -25%;
     }
-    .Thir-Description{
+    #Thir-Description{
         font-size: 11px;
-        margin-left: -35%;
+        margin-left: -10%;
         margin-top: 100%;
     }
-    .Fort-Description{
+    #Fort-Description{
         font-size: 11px;
-        margin-left: -52%;
+        margin-left: -15%;
         margin-top: 230%;
     }
     .footer{
@@ -263,8 +279,17 @@ header .logo{
         flex-direction: column;
         position: relative;
     }
+    @keyframes appear {
+        from{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }   
+    }
 }
-    
     
 
 
